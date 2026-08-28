@@ -8,6 +8,10 @@ export function createHeader() {
           <span class="logo-text">Danielle Bocchi</span>
         </a>
         <nav class="main-nav" id="main-nav" aria-label="Navegação principal">
+          <button class="nav-back" id="nav-back" aria-label="Fechar menu">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
+            Voltar
+          </button>
           <ul class="nav-list">
             <li><a href="/" class="nav-link${isActive('/')}">Home</a></li>
             <li class="nav-dropdown"><a href="/servicos.html" class="nav-link${isActive('/servicos.html')}">Serviços <span class="dropdown-arrow">▾</span></a>
@@ -113,6 +117,16 @@ export function injectComponents() {
       toggle.setAttribute('aria-expanded', String(!expanded));
       nav.classList.toggle('open');
       document.body.classList.toggle('nav-open');
+    });
+  }
+
+  // Mobile nav back button
+  const navBack = document.getElementById('nav-back');
+  if (navBack) {
+    navBack.addEventListener('click', () => {
+      nav.classList.remove('open');
+      document.body.classList.remove('nav-open');
+      toggle.setAttribute('aria-expanded', 'false');
     });
   }
 
