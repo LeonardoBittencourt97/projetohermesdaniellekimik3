@@ -28,6 +28,7 @@ export function createHeader() {
         </a>
         <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
           <span class="hamburger"></span>
+          <span class="close-icon">×</span>
         </button>
       </div>
     </header>

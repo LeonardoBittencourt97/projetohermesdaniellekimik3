@@ -441,6 +441,11 @@ h3 { font-size: clamp(1.3rem, 2.5vw, 1.6rem); }
   flex-direction: column;
   gap: 5px;
   padding: 4px;
+  position: relative;
+  width: 32px;
+  height: 32px;
+  align-items: center;
+  justify-content: center;
 }
 
 .hamburger {
@@ -464,6 +469,25 @@ h3 { font-size: clamp(1.3rem, 2.5vw, 1.6rem); }
 
 .hamburger::before { top: -7px; }
 .hamburger::after { top: 7px; }
+
+.close-icon {
+  display: none;
+}
+
+body.nav-open .close-icon {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.8rem;
+  color: var(--color-offwhite);
+  font-weight: 300;
+}
+
+body.nav-open .hamburger {
+  display: none;
+}
 
 body.nav-open .hamburger::before {
   top: 0;
@@ -1230,8 +1254,27 @@ body.nav-open .hamburger {
     display: none;
   }
 
+  /* Mobile: esconder eyebrow do hero */
+  .hero-eyebrow {
+    display: none;
+  }
+
+  /* Mobile: centralizar hero title mais para o meio */
+  .hero-text {
+    text-align: center;
+    margin-inline: auto;
+  }
+
+  .hero-subtitle {
+    margin-inline: auto;
+  }
+
+  .hero-badge {
+    margin-inline: auto;
+  }
+
   .hero-actions {
-    flex-direction: column;
+    justify-content: center;
   }
 
   .hero-actions .btn {
