@@ -1,0 +1,15 @@
+{
+  "name": "estetica-danielle-bocchi",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Site da Estética Danielle Bocchi — clínica de estética em Curitiba-PR",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.4.0"
+  }
+}
