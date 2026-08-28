@@ -10,7 +10,14 @@ export function createHeader() {
         <nav class="main-nav" id="main-nav" aria-label="Navegação principal">
           <ul class="nav-list">
             <li><a href="/" class="nav-link${isActive('/')}">Home</a></li>
-            <li><a href="/servicos.html" class="nav-link${isActive('/servicos.html')}">Serviços</a></li>
+            <li class="nav-dropdown"><a href="/servicos.html" class="nav-link${isActive('/servicos.html')}">Serviços <span class="dropdown-arrow">▾</span></a>
+              <ul class="dropdown-menu">
+                <li><a href="/servicos.html#lipo-shape">Lipo Shape</a></li>
+                <li><a href="/servicos.html#harmonizacao">Harmonização de Glúteos</a></li>
+                <li><a href="/servicos.html#limpeza">Limpeza de Pele</a></li>
+                <li><a href="/servicos.html#avaliacao">Avaliação Gratuita</a></li>
+              </ul>
+            </li>
             <li><a href="/sobre.html" class="nav-link${isActive('/sobre.html')}">Sobre</a></li>
             <li><a href="/contato.html" class="nav-link${isActive('/contato.html')}">Contato</a></li>
           </ul>
@@ -107,6 +114,16 @@ export function injectComponents() {
       document.body.classList.toggle('nav-open');
     });
   }
+
+  // Mobile dropdown toggle (click onServiços)
+  document.querySelectorAll('.nav-dropdown > .nav-link').forEach(link => {
+    link.addEventListener('click', (e) => {
+      if (window.innerWidth <= 768) {
+        e.preventDefault();
+        link.closest('.nav-dropdown').classList.toggle('open');
+      }
+    });
+  });
 
   // Header scroll effect
   const header = document.getElementById('site-header');
