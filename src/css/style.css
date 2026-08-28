@@ -306,7 +306,6 @@ h3 { font-size: clamp(1.3rem, 2.5vw, 1.6rem); }
 
 .site-header.scrolled {
   background: rgba(26,26,26,0.95);
-  backdrop-filter: blur(12px);
   box-shadow: 0 2px 20px rgba(0,0,0,0.15);
 }
 
@@ -323,9 +322,8 @@ h3 { font-size: clamp(1.3rem, 2.5vw, 1.6rem); }
 }
 
 .logo-img {
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
+  width: 110px;
+  height: auto;
 }
 
 .logo-text {
@@ -440,7 +438,7 @@ body.nav-open .hamburger {
   inset: 0;
   background-size: cover;
   background-position: center 20%;
-  filter: brightness(0.85);
+  filter: none;
 }
 
 .hero-overlay {
@@ -498,7 +496,6 @@ body.nav-open .hamburger {
   align-items: center;
   gap: var(--space-sm);
   background: rgba(26,26,26,0.5);
-  backdrop-filter: blur(8px);
   padding: 0.6rem 1.2rem;
   border-radius: 50px;
   margin-bottom: var(--space-xl);
@@ -919,10 +916,9 @@ body.nav-open .hamburger {
 }
 
 .footer-brand .footer-logo {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  margin-bottom: var(--space-sm);
+  width: 140px;
+  height: auto;
+  margin-bottom: var(--space-md);
 }
 
 .footer-tagline {

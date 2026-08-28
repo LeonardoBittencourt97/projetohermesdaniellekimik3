@@ -34,7 +34,7 @@ export function createFooter() {
       <div class="container">
         <div class="footer-grid">
           <div class="footer-brand">
-            <img src="/assets/images/logo.png" alt="Estética Danielle Bocchi" class="footer-logo">
+            <a href="/" aria-label="Estética Danielle Bocchi - Home"><img src="/assets/images/logo.png" alt="Estética Danielle Bocchi" class="footer-logo"></a>
             <p class="footer-tagline">Seu protocolo, feito pra você.</p>
             <div class="social-links">
               <a href="https://instagram.com/esteticadanibocchi" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
